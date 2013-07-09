@@ -2,7 +2,9 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-var mmsg = fs.readFileSync('~/bitstarter/index.html');
+var text = fs.readFileSync('index.html', 'utf8');
+
+console.log(text)
 
 app.get('/', function(request, response) {
   response.send('Hello World! 2') ;
